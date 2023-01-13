@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+:root {
+  --bg: #121212;
+  --text-color: rgb(255, 255, 255);
+}
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+.text-color {
+  color: var(--text-color) !important;
+  margin: 0 8px;
+}
+.hovertext {
+  position: relative;
+  padding: 0 0 2px;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+}
+.hovertext::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: currentcolor;
+  transform: translateX(-110%);
+  transition: transform 1s ease;
+}
+.hovertext:hover::before {
+  transform: translateX(110%);
+}
+.while {
+  filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(73deg)
+    brightness(113%) contrast(101%);
+}
+.navbar-toggler {
+  filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(73deg)
+    brightness(113%) contrast(101%);
+}
+.margin-icon {
+  margin: 0 0.5rem;
+}
+a.navbar-brand {
+  width: 100px;
+}
+.gadian {
+  background: -webkit-linear-gradient(#eee, rgb(165, 203, 203));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-family: "Catamaran", sans-serif;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: xx-large;
+}
+.me-auto.navbar-nav {
+  margin-left: auto;
+}
+.gadian:hover {
+  font-size: 0;
+}
+.gadian::after {
+  font-size: 0;
+  content: attr(data-hover);
+  transition: 0.5s;
+}
+.gadian:hover::after {
+  content: attr(data-hover);
+  font-size: x-large;
+  text-shadow: 1px 2px 3px rgb(250, 250, 250);
+  transition: 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+span.navbar-text {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+.social-icon {
+  margin-left: 14px;
+  display: inline-block;
+}
+.social-icon a {
+  display: inline-flex;
+  border-radius: 50%;
+
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  line-height: 1;
 }
-
-.App-link {
-  color: #61dafb;
+.social-icon a::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  background-color: #fff;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+  border-radius: 50%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+.social-icon a img {
+  /* width: 40%; */
+  object-fit: cover;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
+    hue-rotate(346deg) brightness(95%) contrast(86%);
+}
+/* animation */
+.text-flicker-in-glow {
+  -webkit-animation: text-flicker-in-glow 4s linear infinite both;
+  animation: text-flicker-in-glow 4s linear infinite both;
 }
