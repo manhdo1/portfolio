@@ -1,0 +1,70 @@
+.banner {
+  /* background-color: #121212; */
+  /* margin-top: 10rem; */
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 10rem;
+  background-image: url(../../assets/image/galaxy.jpg);
+  background-position: top left;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.imgAV img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgb(151, 151, 209);
+}
+
+.cursor {
+  cursor: pointer;
+}
+.img-header {
+  position: relative;
+}
+.img-as {
+  position: absolute;
+  width: 90%;
+  height: auto;
+  -webkit-border-top-left-radius: 100px;
+  -webkit-border-top-right-radius: 200px;
+  -webkit-border-bottom-right-radius: 100px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 10px;
+  object-fit: cover;
+  animation: updown 3s linear infinite;
+}
+
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(
+    90.21deg,
+    rgba(54, 81, 170, 0.5) -5.91%,
+    rgba(78, 75, 94, 0.5) 111.58%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+  border-radius: 2rem;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+

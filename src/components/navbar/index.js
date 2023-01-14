@@ -14,14 +14,17 @@ const Navbar1 = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" className="text-color hovertext">
+              <Nav.Link href="#home" className="text-color hovertext text-uppercase">
                 Home
               </Nav.Link>
-              <Nav.Link href="#Projects" className="text-color hovertext">
+              <Nav.Link href="#Projects" className="text-color hovertext text-uppercase">
                 Projects
               </Nav.Link>
-              <Nav.Link href="#Skills" className="text-color hovertext">
-                Skill
+              <Nav.Link href="#Skills" className="text-color hovertext text-uppercase">
+                Skills
+              </Nav.Link>
+              <Nav.Link href="#Skills" className="text-color hovertext text-uppercase">
+                Contact
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
