@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -11,12 +12,57 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { ImLocation, ImMail } from "react-icons/im";
 const headerText = {
   hi: "WELCOM TO MY PORTFOLIO",
-  intro: "Hi. I'M FRONT-END DEVELOPER",
   desc: "Constantly learning to cultivate knowledge about programming to develop professional skills.",
 };
 const Banner = () => {
   const sendmail = () => {
     window.location = "mailto:dodinhmanh75@gmail.com";
+  };
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(100 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
+  const toRotate = [`Front-end Developer`, "Web Developer"];
+  const period = 2000;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    // console.log(loopNum , toRotate.length, i);
+    let fullText = toRotate[i];
+    // console.log(fullText);
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+    
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setIndex((prevIndex) => prevIndex - 1);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setIndex(1);
+      setDelta(300);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
   };
   return (
     <>
@@ -25,10 +71,13 @@ const Banner = () => {
           <Row>
             <Col xs={12} md={6} xl={7}>
               <span className="tagline">{headerText.hi}</span>
-              <h1>{headerText.intro}</h1>
-              <p>
-                {headerText.desc}
-              </p>
+              <h1>
+                {`Hi! I'm `}{" "}
+                <span className="txt-rotate" dataPeriod="1000">
+                  <span className="wrap">{text}</span>
+                </span>
+              </h1>
+              <p>{headerText.desc}</p>
               <Row>
                 <Col>
                   <div className="imgAV">
@@ -42,7 +91,7 @@ const Banner = () => {
                   <Infor icon={<ImLocation />} desc={"Ho Chi Minh, Viet Nam"} />
                   <Infor icon={<BsFillTelephoneFill />} desc={"0971.237.810"} />
                   <Infor
-                    icon={<ImMail/>}
+                    icon={<ImMail />}
                     desc={"dodinhmanh75@gmail.com"}
                     func={sendmail}
                   />
