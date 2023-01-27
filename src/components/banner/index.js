@@ -44,7 +44,7 @@ const Banner = () => {
     let updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
-    
+
     setText(updatedText);
 
     if (isDeleting) {

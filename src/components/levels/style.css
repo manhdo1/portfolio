@@ -1,0 +1,10 @@
+ul li {
+    list-style-type: none;
+}
+ul li span{
+    content: " ";
+    display: inline-block;
+    width: var(--w-img);
+    border-radius: 10px;
+    margin-right: 20px;
+}

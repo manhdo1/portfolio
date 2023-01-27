@@ -1,0 +1,29 @@
+img {
+  width: calc(var(--w-img) - 10px);
+  height: calc(var(--h-img) - 10px);
+}
+.card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 120px;
+  min-height: 150px;
+  border: none !important;
+}
+.percent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(var(--w-img) + 50px);
+  height: calc(var(--h-img) + 50px);
+  border-radius: 50%;
+  border: 10px solid ;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.text{
+    margin: auto;
+    text-transform: uppercase;
+}
