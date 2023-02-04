@@ -1,11 +1,10 @@
 import React from "react";
 import "./style.css";
 
-// import Htmlcss from "../../assets/image/coding.png";
-// import { Levels } from "./level";
 
-const Skills = ({color,img,text}) => {
-  // console.log(img);
+
+const Skill = ({color,img,text}) => {
+  console.log(color);
   return (
     <>
       <div className="container">
@@ -19,7 +18,7 @@ const Skills = ({color,img,text}) => {
     </>
   );
 };
-export default Skills;
+export default Skill;
 // 1 - Fundamental Awareness (basic knowledge)
 // 2 - Novice (limited experience)
 // 3 - Intermediate (practical application)

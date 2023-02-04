@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 const Navbar1 = () => {
   return (
@@ -9,23 +10,37 @@ const Navbar1 = () => {
       <Navbar className="text-color" expand="lg">
         <Container>
           <Navbar.Brand href="#home">
-            <h1 className="gadian" data-hover="ĐỖ ĐÌNH MẠNH">DDM</h1>
+            <h1 className="gadian" data-hover="ĐỖ ĐÌNH MẠNH">
+              DDM
+            </h1>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" className="text-color hovertext text-uppercase">
+              <Link className="text-color hovertext text-uppercase nav-link" to={"/"}>
                 Home
-              </Nav.Link>
-              <Nav.Link href="#Projects" className="text-color hovertext text-uppercase">
+              </Link>
+
+              <Link
+                className="text-color hovertext text-uppercase nav-link"
+                to={"skills"}
+              >
                 Projects
-              </Nav.Link>
-              <Nav.Link href="#Skills" className="text-color hovertext text-uppercase">
+              </Link>
+
+              <Link
+                className="text-color hovertext text-uppercase nav-link"
+                to={"skills"}
+              >
                 Skills
-              </Nav.Link>
-              <Nav.Link href="#Skills" className="text-color hovertext text-uppercase">
+              </Link>
+
+              <Link
+                className="text-color hovertext text-uppercase nav-link"
+                to={"skills"}
+              >
                 Contact
-              </Nav.Link>
+              </Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -46,7 +61,7 @@ const Navbar1 = () => {
                     src="https://www.freepnglogos.com/uploads/512x512-logo-png/512x512-logo-github-icon-35.png"
                     width="40"
                     alt="img "
-                    className="while margin-icon" 
+                    className="while margin-icon"
                   />
                 </a>
                 <a

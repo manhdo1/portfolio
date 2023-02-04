@@ -2,10 +2,10 @@
 
 nav.navbar {
   padding: 18px 0;
-  position: fixed;
-  width: 100%;
+  /* position: fixed; */
+  width: auto;
   top: 0;
-  z-index: 100;
+  
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {

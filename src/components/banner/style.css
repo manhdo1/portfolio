@@ -4,13 +4,10 @@
 .banner {
   /* background-color: #121212; */
   /* margin-top: 10rem; */
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 10rem;
-  background-image: url(../../assets/image/galaxy.jpg);
-  background-position: top left;
-  background-size: auto;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 98px);
+  padding-top: 3rem;
+ 
 }
 
 .imgAV {
