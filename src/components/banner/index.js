@@ -73,7 +73,7 @@ const Banner = () => {
               <span className="tagline">{headerText.hi}</span>
               <h1>
                 {`Hi! I'm `}{" "}
-                <span className="txt-rotate" dataPeriod="1000">
+                <span className="txt-rotate" dataperiod="1000">
                   <span className="wrap">{text}</span>
                 </span>
               </h1>

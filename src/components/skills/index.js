@@ -4,15 +4,15 @@ import "./style.css";
 
 
 const Skill = ({color,img,text}) => {
-  console.log(color);
+ 
   return (
     <>
-      <div className="container">
-        <div className="card">
-          <div className="percent" style={{borderColor: `${color.lv4}`}}>
-            <img src={img.HCJ} alt="img" />
+      <div className="container ">
+        <div className="card bounce-in-top">
+          <div className="percent" style={{borderColor: `${color}`}}>
+            <img src={img} alt="img" />
           </div>
-            <b className="text">{text.hcj}</b>
+            <b className="text text-focus-in">{text}</b>
         </div>
       </div>
     </>

@@ -1,5 +1,6 @@
 ul li {
     list-style-type: none;
+    color: var(--text-color);
 }
 ul li span{
     content: " ";

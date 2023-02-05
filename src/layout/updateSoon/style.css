@@ -1,0 +1,12 @@
+p.updateText {
+  display: flex;
+  margin: auto 0;
+  text-transform: uppercase;
+  transform: translateY(-3px);
+  margin-right: 1rem;
+}
+.containerUpdate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
