@@ -4,6 +4,7 @@ p.updateText {
   text-transform: uppercase;
   transform: translateY(-3px);
   margin-right: 1rem;
+  color: var(--text-color);
 }
 .containerUpdate {
   display: flex;

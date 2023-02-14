@@ -1,0 +1,61 @@
+.imgCard{
+    object-fit: cover;
+    height: 10rem;
+}
+.colorText{
+    color: var(--text-color);
+}
+a{
+    text-decoration: none !important;
+    color: rgb(26, 28, 30) !important;
+    font-weight: 500;
+}
+button{
+    border: none !important;
+}
+.buttonCss{
+    background: linear-gradient(90deg,#B9F3E4,#EA8FEA,#FFAACF,#F6E6C2,#B9F3E4);
+    background-size: 400%;
+    
+}
+.buttonCss:hover{
+    animation: animetion 8s linear infinite;
+}
+@keyframes animetion {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+.tilt-in-top-1 {
+	-webkit-animation: tilt-in-top-1 0.6s ease-in-out both;
+	        animation: tilt-in-top-1 0.6s ease-in-out both;
+}
+
+ @-webkit-keyframes tilt-in-top-1 {
+    0% {
+      -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+              transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+              transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes tilt-in-top-1 {
+    0% {
+      -webkit-transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+              transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0deg) translateY(0) skewY(0deg);
+              transform: rotateY(0deg) translateY(0) skewY(0deg);
+      opacity: 1;
+    }
+  }
+  

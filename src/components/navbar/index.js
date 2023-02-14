@@ -23,7 +23,7 @@ const Navbar1 = () => {
 
               <Link
                 className="text-color hovertext text-uppercase nav-link"
-                to={"skills"}
+                to={"project"}
               >
                 Projects
               </Link>
@@ -37,7 +37,7 @@ const Navbar1 = () => {
 
               <Link
                 className="text-color hovertext text-uppercase nav-link"
-                to={"skills"}
+                to={"contact"}
               >
                 Contact
               </Link>
@@ -64,7 +64,7 @@ const Navbar1 = () => {
                     className="while margin-icon"
                   />
                 </a>
-                <a
+                {/* <a
                   href="https://www.instagram.com/manhdo1807/"
                   title="instagram"
                 >
@@ -74,7 +74,7 @@ const Navbar1 = () => {
                     alt="img"
                     className="while margin-icon"
                   />
-                </a>
+                </a> */}
               </div>
             </span>
           </Navbar.Collapse>

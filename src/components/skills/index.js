@@ -8,9 +8,9 @@ const Skill = ({color,img,text}) => {
   return (
     <>
       <div className="container ">
-        <div className="card bounce-in-top">
-          <div className="percent" style={{borderColor: `${color}`}}>
-            <img src={img} alt="img" />
+        <div className="card1 bounce-in-top ">
+          <div className="percent zoom" style={{borderColor: `${color}`}}>
+            <img src={img} alt="img"/>
           </div>
             <b className="text text-focus-in">{text}</b>
         </div>
