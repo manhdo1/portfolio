@@ -9,6 +9,8 @@ import Navbar1 from "./components/navbar";
 import Project from "./layout/project";
 import Contact from "./layout/contact";
 
+import Footed from "./components/footed";
+
 function App() {
   return (
     <>
@@ -18,15 +20,8 @@ function App() {
         <Route path="/skills" element={<Skills />}></Route>
         <Route path="/project" element={<Project />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
-
-
       </Routes>
-      {/* <Home/> */}
-      {/* <Routes>
-
-        <Route path="/skills" element={ <Skills/> } />
-    
-      </Routes> */}
+      <Footed />
     </>
   );
 }

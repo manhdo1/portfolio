@@ -1,0 +1,29 @@
+.footed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  
+}
+.color-text {
+   
+	background: linear-gradient(90deg,#ECF9FF,#FFFBEB,#FFE7CC,#F8CBA6,#ECF9FF);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    background-size: 400%;
+    animation: animetion1 8s linear infinite;
+}
+@keyframes animetion1 {
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
+}
+  /* background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+

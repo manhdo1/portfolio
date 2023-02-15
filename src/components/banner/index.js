@@ -34,7 +34,7 @@ const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text,delta]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -66,7 +66,7 @@ const Banner = () => {
   };
   return (
     <>
-      <section className="banner">
+      <section className="banner slide-in-fwd-center">
         <Container>
           <Row>
             <Col xs={12} md={6} xl={7}>

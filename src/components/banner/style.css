@@ -26,9 +26,8 @@
 .imgAV::before{
   content: "";
   position: absolute;
-  width: 150px;
-  height: 150%;
-  
+  width: 200px;
+  height: 100%;
   background: linear-gradient(rgba(189, 49, 224, 0.679), rgb(230, 40, 122));
   animation: rotate 4s linear infinite;
 }

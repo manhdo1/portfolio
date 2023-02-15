@@ -22,12 +22,7 @@ const arrayPJ = [
     type: 2,
     link: "https://github.com/manhdo1/portfolio",
   },
-  {
-    img: pj,
-    title: "Learn Tailwind",
-    type: 2,
-    link: "https://github.com/manhdo1/tailwinLearn",
-  },
+  
 ];
 
 const Project = () => {

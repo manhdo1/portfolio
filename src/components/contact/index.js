@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -8,9 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import "reactjs-popup/dist/index.css";
 const ContactF = () => {
   const form = useRef();
-  const [check, setCheck] = useState(true);
   const sendEmail = (e) => {
-    console.log(form.current);
+    // console.log(form.current);
     e.preventDefault();
     emailjs
       .sendForm(
@@ -22,7 +21,6 @@ const ContactF = () => {
       .then(
         (result) => {
           console.log(result.text);
-          setCheck(true);
           toast("Send success");
         },
         (error) => {
@@ -30,25 +28,27 @@ const ContactF = () => {
         }
       );
   };
-  console.log(check);
+
   return (
     <>
-      {check ? (
-        <ToastContainer
-          position="bottom-right"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
-      ) : null}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
 
-      <Form ref={form} onSubmit={sendEmail} className="mt-4">
+      <Form
+        ref={form}
+        onSubmit={sendEmail}
+        className="mt-4 mb-4 slide-in-fwd-center"
+      >
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Your name</Form.Label>
           <Form.Control
@@ -61,7 +61,6 @@ const ContactF = () => {
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Email address</Form.Label>
           <Form.Control
-            
             required
             type="email"
             placeholder="name@example.com"
