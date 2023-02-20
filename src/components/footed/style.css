@@ -5,6 +5,7 @@
   text-align: center;
   font-weight: 500;
   text-transform: uppercase;
+  font-size: small;
   
 }
 .color-text {
@@ -14,6 +15,7 @@
 	-webkit-text-fill-color: transparent;
     background-size: 400%;
     animation: animetion1 8s linear infinite;
+    
 }
 @keyframes animetion1 {
     0%{
@@ -26,4 +28,9 @@
   /* background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
+  @media only screen and (max-width: 768px) {
+    .footed  {
+        position: unset;
+    }
 
+  }

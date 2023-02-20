@@ -1,7 +1,7 @@
-.containerSkills {
+/* .containerSkills {
     height: calc(100vh - 98px);
 
-}
+} */
 .title{
     text-transform: uppercase;
     color: var(--text-color);
